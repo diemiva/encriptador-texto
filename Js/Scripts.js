@@ -13,6 +13,8 @@ function encriptar() {
      .replace(/u/gi, "ufat");
   
     mostrarResultado(textoCifrado, "Texto encriptado con éxito");
+    document.getElementById("descifrador").style.display = "none";
+  
   }
   
   function desencriptar() {
@@ -30,12 +32,15 @@ function encriptar() {
      .replace(/ufat/gi, "u");
   
     mostrarResultado(textoCifrado, "Texto desencriptado con éxito");
+    document.getElementById("descifrador").style.display = "none";
+
   }
   
   function copiarTexto() {
-    const texto = document.getElementById("resultado-texto").textContent;
-    navigator.clipboard.writeText(texto);
-    alert("Texto copiado al portapapeles");
+    var texto = document.getElementById("resultado-texto"); // Get the element with the id "resultado-texto"
+    texto.select(); 
+    document.execCommand('copy'); 
+    alert("Copiado en el portapapeles!");
   }
   
   function mostrarError(mensaje) {
