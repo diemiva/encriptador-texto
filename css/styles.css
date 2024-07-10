@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+* {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
 }
 
 body{
@@ -13,6 +15,10 @@ body{
     width: 100vw;
     height: 100vh;
     background: #F3F5FC;
+}
+
+#logo{
+    width: 100px;
 }
 
 .texto{
@@ -122,28 +128,27 @@ body{
 
 .resultado {
     position: absolute;
-    width: 40%;
+    width: 35%;
     height: 100%;
     right: 0;
     top: 0;
     background: #FFFFFF;
     padding: 20px;
+    border-radius: 30px;
 }
 
-
-.encriptado{
+.encriptado {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0;
     position: absolute;
-    width: 30%;
-    height: 90%;
-    left: 60%;
+    width: 80%;
+    height: 50%;
+    left: 10%;
     top: 5%;
     background: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0 ,0 , 0.08);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
 
@@ -189,72 +194,55 @@ body{
     text-align: center;
 }
 
-.mensaje-encriptado p{
-    width: 80%;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 150%;
+.mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 1rem;
+    position: relative; 
+    width: 100%;
+    top: 0; 
     text-align: center;
-    color: #495057;
 }
 
-.encriptado img{
-    position: absolute;
-    width: 80%;
-    height: 50%;
-    top: 15%;
-    gap: 5%;
+.encriptado img {
+    margin: 100px;
+    width: 90%;
+    height: 30%; 
+    margin: 0 auto;
+    margin-bottom: 40px; 
+    height: auto;
+    left: 100px;
+    top: 283px;
+    text-align: center;
 }
 
-@media (max-width: 57.5rem){
-    .contendor{
-        display: flex;
-        flex-direction: row;
-    }
-    .encriptar{
-        width: 100%;
-    }
-    .texto{
-        width: 80%;
-        height: 60%;
-        left: 10%;
-        top: 5%;
-    }
-    .Condiciones{
-        width: 80%;
-        left: 10%;
-        top: 67%;
-    }
-    .Condiciones p {
-        font-size: 16px;
-    }
-    .boton{
-        width: 80%;
-        left: 10%;
-        top: 70%;
-    }
-    .boton-encriptar:hover,
-    .boton-desencriptar:hover{
-        margin: 0.3%;
-        width: 47.5%;
-        padding: 1.8%;
-    }
-    .encriptado{
-        width: 80%;
-        height: 15%;
-        left: 10%;
-        top: 80%;
-    }
-    .mensaje-encriptado{
-        width: 100%;
-        top: 5%;
-    }
-    .encriptado img{
-        top: 0;
-        display: none;
-        visibility: hidden;
-    }
 
-}    
+@media (min-width: 768px) and (max-width: 1199px) {
+   .contenedor {
+    flex-direction: column;
+      
+    }
+   .texto {
+      width: 60%;
+      height: 40%;
+    }
+   .Condiciones {
+      width: 60%;
+      top: 60%;
+    }
+   .boton {
+      width: 60%;
+      top: 65%;
+    }
+   .encriptado {
+      width: 60%;
+      height: 30%;
+    }
+    #logo{
+        width: 60px;
+    }
+  }
+
