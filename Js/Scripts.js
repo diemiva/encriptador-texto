@@ -1,5 +1,5 @@
 function encriptar() {
-    const texto = document.getElementById("texto").value.trim();
+    const texto = document.getElementById("texto").value.trim().toLowerCase();
     if (texto === "") {
       mostrarError("Debes ingresar un texto");
       return;
@@ -18,7 +18,7 @@ function encriptar() {
   }
   
   function desencriptar() {
-    const texto = document.getElementById("texto").value.trim();
+    const texto = document.getElementById("texto").value.trim().toLowerCase();
     if (texto === "") {
       mostrarError("Debes ingresar un texto");
       return;
